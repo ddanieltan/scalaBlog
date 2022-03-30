@@ -1,0 +1,8 @@
+.ammonite
+
+#IDE
+.vscode
+.metals
+
+# OSx
+.DS_Store
