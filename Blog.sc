@@ -1,6 +1,12 @@
 import $ivy.`com.lihaoyi::scalatags:0.9.1`, scalatags.Text.all._
 import $ivy.`com.atlassian.commonmark:commonmark:0.13.1`
 
+// Bootstrap CSS
+val bootstrapCss = link(
+  rel := "stylesheet",
+  href := "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.css"
+)
+
 // interp.watch broadens `amm -w` to watch changes to both the script and the specified folder
 interp.watch(os.pwd / "post")
 val postInfo = os
@@ -18,6 +24,7 @@ os.write(
   os.pwd / "out" / "index.html",
   doctype("html")(
     html(
+      head(bootstrapCss),
       body(
         h1("Blog"),
         for ((_, suffix, _) <- postInfo)
@@ -39,8 +46,10 @@ for ((_, suffix, path) <- postInfo) {
     os.pwd / "out" / "post" / mdNameToHtml(suffix),
     doctype("html")(
       html(
+        head(bootstrapCss),
         body(h1(a(href := "../index.html")("Blog"), " / ", suffix), raw(output))
       )
     )
   )
 }
+

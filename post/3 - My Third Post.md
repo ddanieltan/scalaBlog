@@ -6,3 +6,18 @@ if (isAwesome) {
   return true
 }
 ```
+
+```python
+def function():
+  ...
+
+print(1)
+```
+
+```scala
+object Person {
+  def Walk(distance:String) = {
+    distance.toInt
+  }
+}
+```
