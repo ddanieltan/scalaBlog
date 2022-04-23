@@ -6,21 +6,6 @@ if (isAwesome) {
   return true
 }
 ```
-<<<<<<< HEAD
-
-```python
-def function():
-  ...
-
-print(1)
-```
-
-```scala
-object Person {
-  def Walk(distance:String) = {
-    distance.toInt
-  }
-=======
 ```python
 if (isAwesome) {
   return true
@@ -29,6 +14,5 @@ if (isAwesome) {
 ```scala
 if (isAwesome) {
   return true
->>>>>>> 546be907e7f14196384382cd898d48da8d9738de
 }
 ```
